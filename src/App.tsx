@@ -120,7 +120,7 @@ export default function ClanCalculator() {
             >
               <option value="N">None</option>
               <option value="P">Priest</option>
-              <option value="M">Arcane</option>
+              <option value="M">Mage</option>
               <option value="R">Rogue</option>
             </select>
           </div>
