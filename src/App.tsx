@@ -107,7 +107,7 @@ export default function ClanCalculator() {
               
               onChange={(e) => handleChange(index, "level", e.target.value)}
               placeholder="Class Level"
-              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#7795ff' }}
+              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', border: 'none' }}
             />
             <select
               value={player.cls}
@@ -126,7 +126,7 @@ export default function ClanCalculator() {
       <div style={{ textAlign: 'center', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '7795ff' }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#7795ff', color: '#ffcefd', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#1e007e', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
@@ -137,7 +137,7 @@ export default function ClanCalculator() {
           {Object.entries(results.immo).map(([type, data]: [string, ImmoData]) => (
             <div key={type} style={{ marginBottom: '20px', backgroundColor: '#310182', padding: '10px 20px', borderRadius: '6px' }}>
               <h2 style={{ borderBottom: '1px solid #7795ff', paddingBottom: '6px', color: '#ffcefd'}}>Weak to {type}</h2>
-              <ul>
+              <ul style={{ color: '#ffcefd' }}>
                 <li>{data.c} @ {toCps(data.f)} CPS (raw: {pve(data.f)} CPS)</li>
                 <li>{data.b} @ {toCps(data.e)} CPS (raw: {pve(data.e)} CPS)</li>
                 <li>{data.a} @ {toCps(data.d)} CPS (raw: {pve(data.d)} CPS)</li>
