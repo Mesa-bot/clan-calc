@@ -43,9 +43,18 @@ Fixed formatting inconsistency in output
 
 1.0.2
 
-Reverted lazy fix from 1.0.1
+Reverted lazy fix from 1.0.1, and
+Properly fixed issue allowing members to be entered without classes.
 
-Properly fixed issue allowing members to be entered without classes
+Remembered patch notes are a thing and filled in 1.0.1's notes
+because i forgot to do that earlier
+
+1.0.3
+
+Corrected immortal health calculation for level < 7
+(curse you, clicker heroes wiki)
+
+**P U R P L E**
 
 ---
 
