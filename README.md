@@ -1,6 +1,6 @@
 # 🧮 Clan Immortal Level Calculator
 
-This is a web-based calculator to determine the maximum **Immortal levels** your clan can reach in *Tap Titans 2*, based on each member’s level and class (Physical, Arcane, Holy, or None).
+This is a web-based calculator to determine the maximum **Immortal levels** your clan can reach in *Clicker Heroes*, based on each member’s level and class (Physical, Arcane, Holy, or None).
 
 You can try the app here:  
 🔗 [https://mesa-bot.github.io/clan-calc/](https://mesa-bot.github.io/clan-calc/)
