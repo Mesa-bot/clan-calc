@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function calculateHealth(level: number): number {
-  let p = level < 7 ? level * (level % 4) * Math.ceil(level / 3) : 2 * ((level - 1) % 3) + 3;
+  let p = level < 7 ? level + (level % 4) - Math.ceil(level / 3) : 2 * ((level - 1) % 3) + 3;
   return 1750 * p * Math.pow(3, Math.ceil(level / 3));
 }
 
