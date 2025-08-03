@@ -1,6 +1,6 @@
 {
   "name": "clan-calculator",
-  "homepage": "https://mesa-bot.github.io/clan-calculator",
+  "homepage": "https://mesa-bot.github.io/clan-calc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
