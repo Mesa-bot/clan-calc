@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 function calculateHealth(level: number): number {
-  let p = level < 7 ? 0.1 * level : 0.2 * ((level - 1) % 3) + 0.3;
-  return 17500 * p * Math.pow(3, Math.ceil(level / 3));
+  let p = level < 7 ? level * (level % 4) * Math.ceil(level / 3) : 2 * ((level - 1) % 3) + 3;
+  return 1750 * p * Math.pow(3, Math.ceil(level / 3));
 }
 
 function calculateDpc(level: number, cls: string, type: "Holy" | "Arcane" | "Physical" | "None") {
@@ -90,42 +90,43 @@ export default function ClanCalculator() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: '#f5f5f5', borderRadius: '10px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Clan Immortal Level Calculator</h1>
+    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: '#1e007e', borderRadius: '10px' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#ff9bc9' }}>Clan Immortal Level Calculator</h1>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
         {players.map((player, index) => (
           <div
             key={index}
-            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: '#ffffff', padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: '#310182', padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,143,0.1)' }}
           >
-            <label style={{ fontWeight: 'bold' }}>#{index + 1}</label>
+            <label style={{ fontWeight: 'bold', color: '#ffb4ff' }}>#{index + 1}</label>
             <input
               type="number"
               min="1"
               value={player.level}
+              
               onChange={(e) => handleChange(index, "level", e.target.value)}
-              placeholder="Level"
-              style={{ width: '60px', padding: '4px' }}
+              placeholder="Class Level"
+              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#09a3ff' }}
             />
             <select
               value={player.cls}
               onChange={(e) => handleChange(index, "cls", e.target.value)}
-              style={{ padding: '4px' }}
+              style={{ padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#09a3ff' }}
             >
               <option value="N">None</option>
-              <option value="P">P (Holy)</option>
-              <option value="M">M (Arcane)</option>
-              <option value="R">R (Physical)</option>
+              <option value="P">Priest</option>
+              <option value="M">Arcane</option>
+              <option value="R">Rogue</option>
             </select>
           </div>
         ))}
       </div>
 
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '09a3ff' }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#09a3ff', color: '#ffcefd', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
@@ -134,8 +135,8 @@ export default function ClanCalculator() {
       {results && (
         <div style={{ marginTop: '30px' }}>
           {Object.entries(results.immo).map(([type, data]: [string, ImmoData]) => (
-            <div key={type} style={{ marginBottom: '20px', backgroundColor: '#e9ecef', padding: '10px 20px', borderRadius: '6px' }}>
-              <h2 style={{ borderBottom: '1px solid #ccc', paddingBottom: '6px' }}>Weak to {type}</h2>
+            <div key={type} style={{ marginBottom: '20px', backgroundColor: '#310182', padding: '10px 20px', borderRadius: '6px' }}>
+              <h2 style={{ borderBottom: '1px solid #09a3ff', paddingBottom: '6px', color: '#ffcefd'}}>Weak to {type}</h2>
               <ul>
                 <li>{data.c} @ {toCps(data.f)} CPS (raw: {pve(data.f)} CPS)</li>
                 <li>{data.b} @ {toCps(data.e)} CPS (raw: {pve(data.e)} CPS)</li>
