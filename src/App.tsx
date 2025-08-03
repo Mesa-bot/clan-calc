@@ -65,7 +65,7 @@ export default function ClanCalculator() {
     newPlayers[index] = {
       ...newPlayers[index],
       [field]: field === "level"
-        ? value === "" ? undefined : parseInt(value)
+        ? value === "" ? undefined : Math.min(parseInt(value), 150)
         : value,
     };
     setPlayers(newPlayers);
@@ -106,6 +106,7 @@ export default function ClanCalculator() {
             <input
               type="number"
               min="1"
+              max="150"
               value={player.level ?? ""}
 
               onChange={(e) => handleChange(index, "level", e.target.value ? e.target.value : "")}
