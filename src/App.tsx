@@ -107,12 +107,12 @@ export default function ClanCalculator() {
               
               onChange={(e) => handleChange(index, "level", e.target.value)}
               placeholder="Class Level"
-              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#09a3ff' }}
+              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#7795ff' }}
             />
             <select
               value={player.cls}
               onChange={(e) => handleChange(index, "cls", e.target.value)}
-              style={{ padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#09a3ff' }}
+              style={{ padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#7795ff' }}
             >
               <option value="N">None</option>
               <option value="P">Priest</option>
@@ -123,10 +123,10 @@ export default function ClanCalculator() {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '09a3ff' }}>
+      <div style={{ textAlign: 'center', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '7795ff' }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#09a3ff', color: '#ffcefd', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#7795ff', color: '#ffcefd', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
@@ -136,7 +136,7 @@ export default function ClanCalculator() {
         <div style={{ marginTop: '30px' }}>
           {Object.entries(results.immo).map(([type, data]: [string, ImmoData]) => (
             <div key={type} style={{ marginBottom: '20px', backgroundColor: '#310182', padding: '10px 20px', borderRadius: '6px' }}>
-              <h2 style={{ borderBottom: '1px solid #09a3ff', paddingBottom: '6px', color: '#ffcefd'}}>Weak to {type}</h2>
+              <h2 style={{ borderBottom: '1px solid #7795ff', paddingBottom: '6px', color: '#ffcefd'}}>Weak to {type}</h2>
               <ul>
                 <li>{data.c} @ {toCps(data.f)} CPS (raw: {pve(data.f)} CPS)</li>
                 <li>{data.b} @ {toCps(data.e)} CPS (raw: {pve(data.e)} CPS)</li>
