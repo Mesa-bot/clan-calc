@@ -48,7 +48,7 @@ because I forgot to do that earlier
 
 Corrected immortal health calculation for level < 7
 
--# (curse you, clicker heroes wiki)
+(curse you, clicker heroes wiki)
 
 ### **P U R P L E**
 
