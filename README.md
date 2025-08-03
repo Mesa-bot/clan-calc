@@ -1,6 +1,6 @@
 # 🧮 Clan Immortal Level Calculator
 
-This is a web-based calculator to determine the maximum **Immortal levels** your clan can reach in *Clicker Heroes*, based on each member’s level and class (Physical, Arcane, Holy, or None).
+This is a web-based calculator to determine the maximum **Immortal levels** your clan can reach in *Clicker Heroes*, based on each member’s level and class.
 
 You can try the app here:  
 🔗 [https://mesa-bot.github.io/clan-calc/](https://mesa-bot.github.io/clan-calc/)
@@ -47,9 +47,9 @@ because I forgot to do that earlier
 1.0.3
 
 Corrected immortal health calculation for level < 7
-(curse you, clicker heroes wiki)
+-# (curse you, clicker heroes wiki)
 
-**P U R P L E**
+### **P U R P L E**
 
 ---
 
@@ -58,6 +58,8 @@ Corrected immortal health calculation for level < 7
 Calculator originally created by **Nikki**  
 Please report any errors or bugs to them on Discord:  
 `@supermariooddity`
+
+Webpage created 
 
 ---
 
