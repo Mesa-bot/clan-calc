@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './index.css';
 
 function calculateHealth(level: number): number {
   let p = level < 7 ? level + (level % 4) - Math.ceil(level / 3) : 2 * ((level - 1) % 3) + 3;
@@ -108,9 +109,10 @@ export default function ClanCalculator() {
               min="1"
               max="150"
               value={player.level ?? ""}
-
+              
               onChange={(e) => handleChange(index, "level", e.target.value ? e.target.value : "")}
               placeholder="Class Level"
+              className="no-arrows"
               style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', border: 'none' }}
             />
             <select
