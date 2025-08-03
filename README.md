@@ -10,7 +10,6 @@ You can try the app here:
 ## 📦 Features
 
 - Input up to 10 clan members' **level** and **class**
-- Calculates **DPC (damage per click)** values by class type
 - Outputs the 3 most powerful **Immortal levels** your clan can reach per weakness type
 - Shows **CPS** (clicks per second) and raw clicking equivalents
 - Responsive, clean interface – no external styling frameworks required
@@ -19,12 +18,8 @@ You can try the app here:
 
 ## 🧪 Usage
 
-1. Enter each player's **level** (1+)
-2. Select their class:
-   - `P` for Holy
-   - `M` for Arcane
-   - `R` for Physical
-   - `N` for None
+1. Enter each player's **level**
+2. Select their class
 3. Press **"Calculate"** to view results
 
 ---
@@ -43,11 +38,11 @@ Fixed formatting inconsistency in output
 
 1.0.2
 
-Reverted lazy fix from 1.0.1, and
-Properly fixed issue allowing members to be entered without classes.
+Reverted lazy fix from 1.0.1, and properly fixed the issue,
+allowing members to be entered without classes.
 
 Remembered patch notes are a thing and filled in 1.0.1's notes
-because i forgot to do that earlier
+because I forgot to do that earlier
 
 1.0.3
 
