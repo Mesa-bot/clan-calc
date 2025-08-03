@@ -50,6 +50,10 @@ Corrected immortal health calculation for level < 7
 
 (curse you, clicker heroes wiki)
 
+Adjusted MAX class level to 150
+
+Made Class level inputs empty 
+
 ### **P U R P L E**
 
 ---
