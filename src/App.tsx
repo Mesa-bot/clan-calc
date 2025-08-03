@@ -123,10 +123,10 @@ export default function ClanCalculator() {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '7795ff' }}>
+      <div style={{ textAlign: 'center', backgroundColor: '#310182', color: '#ffcefd', borderColor: '7795ff' }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#1e007e', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#16004a', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
