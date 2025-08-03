@@ -52,8 +52,8 @@ function pve(x: number) {
 }
 
 export default function ClanCalculator() {
-  const [players, setPlayers] = useState<{ level: number; cls: string }[]>(
-    Array.from({ length: 10 }, () => ({ level: 1, cls: "N" }))
+  const [players, setPlayers] = useState<{ level: number | undefined; cls: string }[]>(
+    Array.from({ length: 10 }, () => ({ level: undefined, cls: "N" }))
   );
   const [results, setResults] = useState<{
     dpcs: Record<string, number>;
@@ -64,7 +64,9 @@ export default function ClanCalculator() {
     const newPlayers = [...players];
     newPlayers[index] = {
       ...newPlayers[index],
-      [field]: field === "level" ? parseInt(value) : value,
+      [field]: field === "level"
+        ? value === "" ? undefined : parseInt(value)
+        : value,
     };
     setPlayers(newPlayers);
   };
@@ -75,6 +77,7 @@ export default function ClanCalculator() {
       const level = players[i].level;
       const cls = players[i].cls.toUpperCase();
       for (const type of ["None", "Arcane", "Holy", "Physical"] as const) {
+        if (!level || isNaN(level)) continue;
         dpcs[type] += calculateDpc(level, cls, type);
       }
     }
@@ -103,9 +106,9 @@ export default function ClanCalculator() {
             <input
               type="number"
               min="1"
-              value={player.level}
-              
-              onChange={(e) => handleChange(index, "level", e.target.value)}
+              value={player.level ?? ""}
+
+              onChange={(e) => handleChange(index, "level", e.target.value ? e.target.value : "")}
               placeholder="Class Level"
               style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', border: 'none' }}
             />
@@ -123,10 +126,10 @@ export default function ClanCalculator() {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', backgroundColor: '#310182', color: '#ffcefd', borderColor: '7795ff' }}>
+      <div style={{ textAlign: 'center', color: '#ffcefd', borderColor: '7795ff' }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#16004a', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#5800a8', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
