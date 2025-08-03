@@ -27,13 +27,15 @@ You can try the app here:
 
 1.0.0 - Release
 
+
 1.0.1
 
 Fixed typo in instructions, changed "may" to "must"
 regarding entering member classes, as a lazy fix for
 an error when entering a clan member without a class.
 
-Fixed formatting inconsistency in output
+Fixed formatting inconsistency in output.
+
 
 1.0.2
 
@@ -42,6 +44,7 @@ allowing members to be entered without classes.
 
 Remembered patch notes are a thing and filled in 1.0.1's notes
 because I forgot to do that earlier
+
 
 1.1.0
 
@@ -54,6 +57,7 @@ Made Class level inputs empty by default.
 We have an actual webpage now and it's
 
 ### **P U R P L E**
+
 
 1.1.1
 
