@@ -47,6 +47,7 @@ because I forgot to do that earlier
 1.0.3
 
 Corrected immortal health calculation for level < 7
+
 -# (curse you, clicker heroes wiki)
 
 ### **P U R P L E**
@@ -59,7 +60,7 @@ Calculator originally created by **Nikki**
 Please report any errors or bugs to them on Discord:  
 `@supermariooddity`
 
-Webpage created 
+Webpage created by Huang Bao
 
 ---
 
