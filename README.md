@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# 🧮 Clan Immortal Level Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based calculator to determine the maximum **Immortal levels** your clan can reach in *Tap Titans 2*, based on each member’s level and class (Physical, Arcane, Holy, or None).
 
-## Available Scripts
+You can try the app here:  
+🔗 [https://mesa-bot.github.io/clan-calculator](https://mesa-bot.github.io/clan-calculator)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📦 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Input up to 10 clan members' **level** and **class**
+- Calculates **DPC (damage per click)** values by class type
+- Outputs the 3 most powerful **Immortal levels** your clan can reach per weakness type
+- Shows **CPS** (clicks per second) and raw clicking equivalents
+- Responsive, clean interface – no external styling frameworks required
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧪 Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Enter each player's **level** (1+)
+2. Select their class:
+   - `P` for Holy
+   - `M` for Arcane
+   - `R` for Physical
+   - `N` for None
+3. Press **"Calculate"** to view results
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧾 Patch Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.0.0 - Release
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.0.1
 
-### `npm run eject`
+Fixed typo in instructions, changed "may" to "must"
+regarding entering member classes, as a lazy fix for
+an error when entering a clan member without a class.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Fixed formatting inconsistency in output
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.0.2
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Reverted lazy fix from 1.0.1
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Properly fixed issue allowing members to be entered without classes
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🙏 Credits
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Calculator originally created by **Nikki**  
+Please report any errors or bugs to them on Discord:  
+`@supermariooddity`
+
+---
+
+## 🚀 Development
+
+This app was rebuilt using **React + TypeScript**, with clean vanilla styling and GitHub Pages deployment.
+
+To run locally:
+
+```bash
+npm install
+npm start
