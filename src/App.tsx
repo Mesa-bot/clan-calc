@@ -45,7 +45,7 @@ function maxImmo(dpc: number): ImmoData {
 }
 
 function toCps(clicks: number) {
-  return Math.round((clicks / 15) * 10) / 10;
+  return Math.round((clicks / 15) * 100) / 100;
 }
 
 function pve(x: number) {
@@ -103,7 +103,7 @@ export default function ClanCalculator() {
             key={index}
             style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: '#310182', padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,143,0.1)' }}
           >
-            <label style={{ fontWeight: 'bold', color: '#ffb4ff' }}>#{index + 1}</label>
+            <label style={{ fontWeight: 'bold', color: '#ffb4ff'}}>#{index + 1}</label>
             <input
               type="number"
               min="1"
@@ -121,8 +121,8 @@ export default function ClanCalculator() {
               style={{ padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#7795ff' }}
             >
               <option value="N">None</option>
-              <option value="P">Priest</option>
               <option value="M">Mage</option>
+              <option value="P">Priest</option>
               <option value="R">Rogue</option>
             </select>
           </div>
