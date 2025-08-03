@@ -12,14 +12,13 @@ You can try the app here:
 - Input up to 10 clan members' **level** and **class**
 - Outputs the 3 most powerful **Immortal levels** your clan can reach per weakness type
 - Shows **CPS** (clicks per second) and raw clicking equivalents
-- Responsive, clean interface – no external styling frameworks required
 
 ---
 
 ## 🧪 Usage
 
-1. Enter each player's **level**
-2. Select their class
+1. Enter each player's **level** in the empty box
+2. Select their **class** from the dropdown list
 3. Press **"Calculate"** to view results
 
 ---
@@ -44,17 +43,25 @@ allowing members to be entered without classes.
 Remembered patch notes are a thing and filled in 1.0.1's notes
 because I forgot to do that earlier
 
-1.0.3
+1.1.0
 
-Corrected immortal health calculation for level < 7
+Corrected immortal health calculation for level < 7 (curse you, clicker heroes wiki)
 
-(curse you, clicker heroes wiki)
+Adjusted MAX class level to 150 to prevent users from entering absurd numbers and crashing their browsers.
 
-Adjusted MAX class level to 150
+Made Class level inputs empty by default.
 
-Made Class level inputs empty 
+We have an actual webpage now and it's
 
 ### **P U R P L E**
+
+1.1.1
+
+Upgraded reported CPS precision to 2 decimal places.
+
+Fixed inconsistency in class order between the dropdown list and the results panels. Really just an OCD fix tbh.
+
+Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update
 
 ---
 
@@ -64,7 +71,7 @@ Calculator originally created by **Nikki**
 Please report any errors or bugs to them on Discord:  
 `@supermariooddity`
 
-Webpage created by Huang Bao
+Webpage created by **Huang Bao**
 
 ---
 
