@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './index.css';
 
 function calculateHealth(level: number): number {
@@ -61,6 +61,12 @@ export default function ClanCalculator() {
     immo: Record<string, ImmoData>;
   } | null>(null);
 
+ //handle color switch
+  const [theme, setTheme] = useState<"purple" | "gray">("purple");
+  useEffect(() => {
+   document.body.style.backgroundColor = theme === "purple" ? "#16004a" : "#3c3c3c";
+  }, [theme]);
+
   const handleChange = (index: number, field: "level" | "cls", value: string) => {
     const newPlayers = [...players];
     newPlayers[index] = {
@@ -70,6 +76,14 @@ export default function ClanCalculator() {
         : value,
     };
     setPlayers(newPlayers);
+  };
+
+  const styles = {
+    bg: theme === "purple" ? "#1e007e" : "#1e1e1e",
+    card: theme === "purple" ? "#310182" : "#252526",     
+    input: theme === "purple" ? "#5800a8" : "#1e1e1e",  
+    text: theme === "purple" ? "#ffcefd" : "#d4d4d4",     
+    border: theme === "purple" ? "#7795ff" : "#3c3c3c",
   };
 
   const handleCalculate = () => {
@@ -94,16 +108,33 @@ export default function ClanCalculator() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: '#1e007e', borderRadius: '10px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#ffcefd' }}>Clan Immortal Level Calculator</h1>
+    
+    <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: styles.bg, borderRadius: '10px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <button
+          onClick={() => setTheme(theme === "purple" ? "gray" : "purple")}
+          style={{
+          padding: '6px 12px',
+          backgroundColor: styles.card,
+          color: "white",
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer'
+          }}
+        >
+          Switch to {theme === "purple" ? "Dark" : "Purple"} Theme
+        </button>
+</div>
+
+      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: styles.text }}>Clan Immortal Level Calculator</h1>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
         {players.map((player, index) => (
           <div
             key={index}
-            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: '#310182', padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,143,0.1)' }}
+            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: styles.card, padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,143,0.1)' }}
           >
-            <label style={{ fontWeight: 'bold', color: '#ffb4ff'}}>#{index + 1}</label>
+            <label style={{ fontWeight: 'bold', color: styles.text}}>#{index + 1}</label>
             <input
               type="number"
               min="1"
@@ -113,12 +144,12 @@ export default function ClanCalculator() {
               onChange={(e) => handleChange(index, "level", e.target.value ? e.target.value : "")}
               placeholder="Class Level"
               className="no-arrows"
-              style={{ width: '60px', padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', border: 'none' }}
+              style={{ width: '60px', padding: '4px', backgroundColor: styles.input, color: styles.text, border: 'none' }}
             />
             <select
               value={player.cls}
               onChange={(e) => handleChange(index, "cls", e.target.value)}
-              style={{ padding: '4px', backgroundColor: '#5800a8', color: '#ffcefd', borderColor: '#7795ff' }}
+              style={{ padding: '4px', backgroundColor: styles.input, color: styles.text, borderColor: styles.border }}
             >
               <option value="N">None</option>
               <option value="M">Mage</option>
@@ -129,10 +160,10 @@ export default function ClanCalculator() {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', color: '#ffcefd', borderColor: '7795ff' }}>
+      <div style={{ textAlign: 'center', color: styles.text, borderColor: styles.border }}>
         <button
           onClick={handleCalculate}
-          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: '#5800a8', color: '#fef', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          style={{ marginTop: '20px', padding: '10px 20px', backgroundColor: styles.card, color: styles.text , border: 'none', borderRadius: '5px', cursor: 'pointer' }}
         >
           Calculate
         </button>
@@ -141,9 +172,9 @@ export default function ClanCalculator() {
       {results && (
         <div style={{ marginTop: '30px' }}>
           {Object.entries(results.immo).map(([type, data]: [string, ImmoData]) => (
-            <div key={type} style={{ marginBottom: '20px', backgroundColor: '#310182', padding: '10px 20px', borderRadius: '6px' }}>
-              <h2 style={{ borderBottom: '1px solid #7795ff', paddingBottom: '6px', color: '#ffcefd'}}>Weak to {type}</h2>
-              <ul style={{ color: '#ffcefd' }}>
+            <div key={type} style={{ marginBottom: '20px', backgroundColor: styles.card, padding: '10px 20px', borderRadius: '6px' }}>
+              <h2 style={{ borderBottom: '1px solid', paddingBottom: '6px', color: styles.text, borderColor: styles.border}}>Weak to {type}</h2>
+              <ul style={{ color: styles.text }}>
                 <li>{data.c} @ {toCps(data.f)} CPS (raw: {pve(data.f)} CPS)</li>
                 <li>{data.b} @ {toCps(data.e)} CPS (raw: {pve(data.e)} CPS)</li>
                 <li>{data.a} @ {toCps(data.d)} CPS (raw: {pve(data.d)} CPS)</li>

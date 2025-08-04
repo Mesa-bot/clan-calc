@@ -70,6 +70,7 @@ Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update
 
 Minor change to the colour of the title to match the rest of the text on the page
 
+Added Darkmode
 ---
 
 ## 🙏 Credits
