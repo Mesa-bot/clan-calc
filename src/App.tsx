@@ -95,7 +95,7 @@ export default function ClanCalculator() {
 
   return (
     <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: '#1e007e', borderRadius: '10px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#ff9bc9' }}>Clan Immortal Level Calculator</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#ffcefd' }}>Clan Immortal Level Calculator</h1>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
         {players.map((player, index) => (
