@@ -25,7 +25,9 @@ You can try the app here:
 
 ## 🧾 Patch Notes
 
-1.0.0 - Release
+1.0.0 
+
+Release
 
 
 1.0.1
@@ -55,7 +57,6 @@ Adjusted MAX class level to 150 to prevent users from entering absurd numbers an
 Made Class level inputs empty by default.
 
 We have an actual webpage now and it's
-
 ### **P U R P L E**
 
 
@@ -66,6 +67,8 @@ Upgraded reported CPS precision to 2 decimal places.
 Fixed inconsistency in class order between the dropdown list and the results panels. Really just an OCD fix tbh.
 
 Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update
+
+Minor change to the colour of the title to match the rest of the text on the page
 
 ---
 
