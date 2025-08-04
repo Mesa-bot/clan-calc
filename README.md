@@ -70,7 +70,10 @@ Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update
 
 Minor change to the colour of the title to match the rest of the text on the page
 
-Added Darkmode
+1.1.2
+
+Added Dark Mode which is more easily viewable for people with colour blindness (you're welcome, Askell)
+
 ---
 
 ## 🙏 Credits
