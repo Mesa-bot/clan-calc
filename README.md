@@ -74,6 +74,8 @@ Minor change to the colour of the title to match the rest of the text on the pag
 
 Added Dark Mode which is more easily viewable for people with colour blindness (you're welcome, Askell)
 
+Fixed UI on mobile devices extending past the background elements due to being too wide. The mobile UI now has everything in on column rather than two.
+
 ---
 
 ## 🙏 Credits
