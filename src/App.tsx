@@ -62,10 +62,18 @@ export default function ClanCalculator() {
   } | null>(null);
 
  //handle color switch
-  const [theme, setTheme] = useState<"purple" | "gray">("purple");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "purple";
+  });
   useEffect(() => {
-   document.body.style.backgroundColor = theme === "purple" ? "#16004a" : "#3c3c3c";
+    document.body.style.backgroundColor = theme === "purple" ? "#16004a" : "#3c3c3c";
   }, [theme]);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "purple" ? "gray" : "purple";
+    setTheme(newTheme);
+  localStorage.setItem("theme", newTheme);
+};
 
   const handleChange = (index: number, field: "level" | "cls", value: string) => {
     const newPlayers = [...players];
@@ -112,7 +120,7 @@ export default function ClanCalculator() {
     <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'sans-serif', backgroundColor: styles.bg, borderRadius: '10px' }}>
       <div style={{ textAlign: 'center', marginBottom: '20px' }}>
         <button
-          onClick={() => setTheme(theme === "purple" ? "gray" : "purple")}
+          onClick={toggleTheme}
           style={{
           padding: '6px 12px',
           backgroundColor: styles.card,
