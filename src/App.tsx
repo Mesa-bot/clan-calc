@@ -49,7 +49,7 @@ function toCps(clicks: number) {
 }
 
 function pve(x: number) {
-  return Math.max(0, Math.round((-30 + x / 15) * 10) / 10);
+  return Math.max(0, Math.round((-30 + x / 15) * 100) / 100);
 }
 
 export default function ClanCalculator() {
