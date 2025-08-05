@@ -76,6 +76,10 @@ Added Dark Mode which is more easily viewable for people with colour blindness (
 
 Fixed UI on mobile devices extending past the background elements due to being too wide. The mobile UI now has everything in on column rather than two.
 
+1.1.3
+
+Fixed raw CPS only displaying one decimal place of precision.
+
 ---
 
 ## 🙏 Credits
