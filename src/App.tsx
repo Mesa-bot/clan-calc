@@ -87,11 +87,11 @@ export default function ClanCalculator() {
   };
 
   const styles = {
-    bg: theme === "purple" ? "#1e007e" : "#1e1e1e",
-    card: theme === "purple" ? "#310182" : "#252526",     
-    input: theme === "purple" ? "#5800a8" : "#1e1e1e",  
-    text: theme === "purple" ? "#ffcefd" : "#d4d4d4",     
-    border: theme === "purple" ? "#7795ff" : "#3c3c3c",
+    bg: theme === "purple" ? "#1e004e" : "#1e1e1e",
+    card: theme === "purple" ? "#310142" : "#252526",     
+    input: theme === "purple" ? "#580078" : "#1e1e1e",  
+    text: theme === "purple" ? "#ffcecd" : "#d4d4d4",     
+    border: theme === "purple" ? "#7795cf" : "#3c3c3c",
   };
 
   const handleCalculate = () => {
@@ -140,7 +140,7 @@ export default function ClanCalculator() {
         {players.map((player, index) => (
           <div
             key={index}
-            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: styles.card, padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,143,0.1)' }}
+            style={{ display: 'flex', gap: '10px', alignItems: 'center', backgroundColor: styles.card, padding: '10px', borderRadius: '6px', boxShadow: '0 2px 4px rgba(54,1,125,0.1)' }}
           >
             <label style={{ fontWeight: 'bold', color: styles.text}}>#{index + 1}</label>
             <input
