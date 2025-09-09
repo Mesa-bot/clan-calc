@@ -22,6 +22,10 @@ interface ImmoData {
   d: number;
   e: number;
   f: number;
+  g: number;
+  h: number;
+  i: number;
+  j: number;
 }
 
 function maxImmo(dpc: number): ImmoData {
@@ -31,9 +35,14 @@ function maxImmo(dpc: number): ImmoData {
     for (let n = 0; n <= 900; n++) {
       const health = calculateHealth(x);
       if (health <= n * dpc && health > (n - 1) * dpc) {
+        h = g;
+        g = c;
         c = b;
         b = a;
         a = x;
+        
+        j = i;
+        i = f;
         f = e;
         e = d;
         d = n;
@@ -41,7 +50,7 @@ function maxImmo(dpc: number): ImmoData {
     }
     x++;
   }
-  return { a, b, c, d, e, f };
+  return { a, b, c, g, h, d, e, f, i, j };
 }
 
 function toCps(clicks: number) {
@@ -183,9 +192,11 @@ export default function ClanCalculator() {
             <div key={type} style={{ marginBottom: '20px', backgroundColor: styles.card, padding: '10px 20px', borderRadius: '6px' }}>
               <h2 style={{ borderBottom: '1px solid', paddingBottom: '6px', color: styles.text, borderColor: styles.border}}>Weak to {type}</h2>
               <ul style={{ color: styles.text }}>
-                <li>{data.c} @ {toCps(data.f)} CPS (raw: {pve(data.f)} CPS)</li>
-                <li>{data.b} @ {toCps(data.e)} CPS (raw: {pve(data.e)} CPS)</li>
-                <li>{data.a} @ {toCps(data.d)} CPS (raw: {pve(data.d)} CPS)</li>
+                <li>{data.a} @ {toCps(data.d)} CPS (raw with 3 ACs: {pve(data.d)} CPS)</li>
+                <li>{data.b} @ {toCps(data.e)} CPS (raw with 3 ACs: {pve(data.e)} CPS)</li>
+                <li>{data.c} @ {toCps(data.f)} CPS (raw with 3 ACs: {pve(data.f)} CPS)</li>
+                <li>{data.g} @ {toCps(data.i)} CPS (raw with 3 ACs: {pve(data.i)} CPS)</li>
+                <li>{data.h} @ {toCps(data.j)} CPS (raw with 3 ACs: {pve(data.j)} CPS)</li>
               </ul>
             </div>
           ))}
