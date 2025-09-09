@@ -29,7 +29,7 @@ interface ImmoData {
 }
 
 function maxImmo(dpc: number): ImmoData {
-  let a = 0, b = 0, c = 0, d = 0, e = 0, f = 0;
+  let a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0;
   let x = 1;
   while (calculateHealth(x) <= 900 * dpc) {
     for (let n = 0; n <= 900; n++) {
