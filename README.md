@@ -10,7 +10,7 @@ You can try the app here:
 ## 📦 Features
 
 - Input up to 10 clan members' **level** and **class**
-- Outputs the 3 most powerful **Immortal levels** your clan can reach per weakness type
+- Outputs the 5 most powerful **Immortal levels** your clan can reach, per weakness type
 - Shows **CPS** (clicks per second) and raw clicking equivalents
 
 ---
@@ -92,6 +92,8 @@ Changed the number of displayed results from 3 to 5, to account for people with 
 Fixed typos in earlier patch notes that I'm sure everyone noticed and cared deeply about.
 
 Major optimisation to the calculator, starting immortal level iterations at 3L-10 instead of at 1, where L is the highest level clan member. This saves up to 95% of iterations in extreme cases, allowing the calculator to work even on a potato connected to the internet with tin cans and a string. (Disclaimer: potatoes cannot run computations, nor can tin cans and a string connect one to the internet)
+
+Changed "raw" to give the number of clicks required instead of the "raw CPS" since it's more useful.
 
 ---
 
