@@ -50,14 +50,14 @@ because I forgot to do that earlier
 
 1.1.0
 
-Corrected immortal health calculation for level < 7 (curse you, clicker heroes wiki)
+Corrected immortal health calculation for level < 7. Curse you, clicker heroes wiki!
 
-Adjusted MAX class level to 150 to prevent users from entering absurd numbers and crashing their browsers.
+Adjusted max class level to 150 to prevent users from entering absurd numbers and crashing their browsers.
 
 Made Class level inputs empty by default.
 
 We have an actual webpage now and it's
-### **P U R P L E**
+**P U R P L E**
 
 
 1.1.1
@@ -66,26 +66,36 @@ Upgraded reported CPS precision to 2 decimal places.
 
 Fixed inconsistency in class order between the dropdown list and the results panels. Really just an OCD fix tbh.
 
-Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update
+Renamed 1.0.3 to 1.1.0 because getting a webpage was a pretty major update.
 
-Minor change to the colour of the title to match the rest of the text on the page
+Minor change to the colour of the title to match the rest of the text on the page.
 
 1.1.2
 
 Added Dark Mode which is more easily viewable for people with colour blindness (you're welcome, Askell)
 
-Fixed UI on mobile devices extending past the background elements due to being too wide. The mobile UI now has everything in on column rather than two.
+Fixed UI on mobile devices extending past the background elements due to being too wide. The mobile UI now has everything in one column rather than two.
 
 1.1.3
 
 Fixed raw CPS only displaying one decimal place of precision.
+
+1.1.4
+
+Inverted the display order of immortal results and clarified the meaning of "raw CPS" to "raw CPS with 3 ACs"
+
+Temporary change to purple theme because I originally designed it with anti-blue filters on. Whoops! All hex values have #000030 subtracted from them until I do a proper recolouring.
+
+Fixed typos in earlier patch notes that I'm sure everyone noticed and cared deeply about.
+
+Changed the number of displayed results from 3 to 5, to account for people with less than 3 auto-clickers.
 
 ---
 
 ## 🙏 Credits
 
 Calculator originally created by **Nikki**  
-Please report any errors or bugs to them on Discord:  
+Please report any errors or bugs to her on Discord:  
 `@supermariooddity`
 
 Webpage created by **Huang Bao**
