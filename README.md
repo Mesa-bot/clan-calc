@@ -59,7 +59,6 @@ Made Class level inputs empty by default.
 We have an actual webpage now and it's
 **P U R P L E**
 
-
 1.1.1
 
 Upgraded reported CPS precision to 2 decimal places.
@@ -72,7 +71,7 @@ Minor change to the colour of the title to match the rest of the text on the pag
 
 1.1.2
 
-Added Dark Mode which is more easily viewable for people with colour blindness (you're welcome, Askell)
+Added Dark Mode which is more easily viewable for people with colour blindness (and frankly for everyone else too)
 
 Fixed UI on mobile devices extending past the background elements due to being too wide. The mobile UI now has everything in one column rather than two.
 
@@ -86,9 +85,13 @@ Inverted the display order of immortal results and clarified the meaning of "raw
 
 Temporary change to purple theme because I originally designed it with anti-blue filters on. Whoops! All hex values have #000030 subtracted from them until I do a proper recolouring.
 
+Changed the number of displayed results from 3 to 5, to account for people with less than 3 auto-clickers.
+
+1.1.5
+
 Fixed typos in earlier patch notes that I'm sure everyone noticed and cared deeply about.
 
-Changed the number of displayed results from 3 to 5, to account for people with less than 3 auto-clickers.
+Major optimisation to the calculator, starting immortal level iterations at 3L-10 instead of at 1, where L is the highest level clan member. This saves up to 95% of iterations in extreme cases, allowing the calculator to work even on a potato connected to the internet with tin cans and a string. (Disclaimer: potatoes cannot run computations, nor can tin cans and a string connect one to the internet)
 
 ---
 
