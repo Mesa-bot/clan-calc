@@ -57,10 +57,6 @@ function toCps(clicks: number) {
   return Math.round((clicks / 15) * 100) / 100;
 }
 
-function pve(x: number) {
-  return Math.max(0, Math.round((-30 + x / 15) * 100) / 100);
-}
-
 export default function ClanCalculator() {
   const [players, setPlayers] = useState<{ level: number | undefined; cls: string }[]>(
     Array.from({ length: 10 }, () => ({ level: undefined, cls: "N" }))
@@ -194,11 +190,11 @@ export default function ClanCalculator() {
             <div key={type} style={{ marginBottom: '20px', backgroundColor: styles.card, padding: '10px 20px', borderRadius: '6px' }}>
               <h2 style={{ borderBottom: '1px solid', paddingBottom: '6px', color: styles.text, borderColor: styles.border}}>Weak to {type}</h2>
               <ul style={{ color: styles.text }}>
-                <li>{data.a} @ {toCps(data.d)} CPS (raw with 3 ACs: {pve(data.d)} CPS)</li>
-                <li>{data.b} @ {toCps(data.e)} CPS (raw with 3 ACs: {pve(data.e)} CPS)</li>
-                <li>{data.c} @ {toCps(data.f)} CPS (raw with 3 ACs: {pve(data.f)} CPS)</li>
-                <li>{data.g} @ {toCps(data.i)} CPS (raw with 3 ACs: {pve(data.i)} CPS)</li>
-                <li>{data.h} @ {toCps(data.j)} CPS (raw with 3 ACs: {pve(data.j)} CPS)</li>
+                <li>{data.a} @ {toCps(data.d)} CPS (raw: {data.d} clicks)</li>
+                <li>{data.b} @ {toCps(data.e)} CPS (raw: {data.e} clicks)</li>
+                <li>{data.c} @ {toCps(data.f)} CPS (raw: {data.f} clicks)</li>
+                <li>{data.g} @ {toCps(data.i)} CPS (raw: {data.i} clicks)</li>
+                <li>{data.h} @ {toCps(data.j)} CPS (raw: {data.j} clicks)</li>
               </ul>
             </div>
           ))}
