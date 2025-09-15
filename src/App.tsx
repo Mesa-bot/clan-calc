@@ -30,7 +30,7 @@ interface ImmoData {
 
 function maxImmo(dpc: number): ImmoData {
   let a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0;
-  let x = 1;
+  let x = Math.max(1,3 * maxLevel - 10);
   while (calculateHealth(x) <= 900 * dpc) {
     for (let n = 0; n <= 900; n++) {
       const health = calculateHealth(x);
@@ -105,8 +105,10 @@ export default function ClanCalculator() {
 
   const handleCalculate = () => {
     let dpcs = { None: 0, Arcane: 0, Holy: 0, Physical: 0 };
+    let maxLevel = 0
     for (let i = 0; i < players.length; i++) {
       const level = players[i].level;
+      maxLevel = Math.max(level, maxLevel)
       const cls = players[i].cls.toUpperCase();
       for (const type of ["None", "Arcane", "Holy", "Physical"] as const) {
         if (!level || isNaN(level)) continue;
