@@ -28,9 +28,9 @@ interface ImmoData {
   j: number;
 }
 
-function maxImmo(dpc: number): ImmoData {
+function maxImmo(dpc: number, highestMember: number): ImmoData {
   let a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0;
-  let x = Math.max(1,3 * maxLevel - 10);
+  let x = Math.max(1,3 * highestMember - 10);
   while (calculateHealth(x) <= 900 * dpc) {
     for (let n = 0; n <= 900; n++) {
       const health = calculateHealth(x);
@@ -113,10 +113,10 @@ export default function ClanCalculator() {
     }
 
     const immo = {
-      None: maxImmo(dpcs.None),
-      Arcane: maxImmo(dpcs.Arcane),
-      Holy: maxImmo(dpcs.Holy),
-      Physical: maxImmo(dpcs.Physical),
+      None: maxImmo(dpcs.None, maxLevel),
+      Arcane: maxImmo(dpcs.Arcane, maxLevel),
+      Holy: maxImmo(dpcs.Holy, maxLevel),
+      Physical: maxImmo(dpcs.Physical, maxLevel),
     };
 
     setResults({ dpcs, immo });
