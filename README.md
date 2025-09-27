@@ -95,6 +95,8 @@ Major optimisation to the calculator, starting immortal level iterations at 3L-1
 
 Changed "raw" to give the number of clicks required instead of the "raw CPS" since it's easier to explain.
 
+Recoloured the purple theme so it looks better in sRGB.
+
 ---
 
 ## 🙏 Credits
