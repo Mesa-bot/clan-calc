@@ -93,7 +93,7 @@ export default function ClanCalculator() {
 
   const styles = {
     bg: theme === "purple" ? "#1e004e" : "#1e1e1e",
-    card: theme === "purple" ? "#310142" : "#252526",     
+    card: theme === "purple" ? "#3C0064" : "#252526",     
     input: theme === "purple" ? "#580078" : "#1e1e1e",  
     text: theme === "purple" ? "#ffcecd" : "#d4d4d4",     
     border: theme === "purple" ? "#7795cf" : "#3c3c3c",
