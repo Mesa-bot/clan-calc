@@ -19,7 +19,7 @@ You can try the app here:
 
 1. Enter each player's **level** in the empty box
 2. Select their **class** from the dropdown list
-3. Press **"Calculate"** to view results
+3. Results update as you type
 
 ---
 
