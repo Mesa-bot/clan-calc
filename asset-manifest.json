@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/clan-calc/static/css/main.1a03f654.css",
-    "main.js": "/clan-calc/static/js/main.47c53b49.js",
-    "static/js/453.6ed0ba32.chunk.js": "/clan-calc/static/js/453.6ed0ba32.chunk.js",
+    "main.css": "/clan-calc/static/css/main.a2984f46.css",
+    "main.js": "/clan-calc/static/js/main.38fb1bbc.js",
     "index.html": "/clan-calc/index.html",
-    "main.1a03f654.css.map": "/clan-calc/static/css/main.1a03f654.css.map",
-    "main.47c53b49.js.map": "/clan-calc/static/js/main.47c53b49.js.map",
-    "453.6ed0ba32.chunk.js.map": "/clan-calc/static/js/453.6ed0ba32.chunk.js.map"
+    "main.a2984f46.css.map": "/clan-calc/static/css/main.a2984f46.css.map",
+    "main.38fb1bbc.js.map": "/clan-calc/static/js/main.38fb1bbc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a03f654.css",
-    "static/js/main.47c53b49.js"
+    "static/css/main.a2984f46.css",
+    "static/js/main.38fb1bbc.js"
   ]
 }
